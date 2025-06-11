@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #000000;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Form Container */
+form {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Table Layout for Form */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px 8px;
+    vertical-align: middle;
+}
+
+/* Label and Input Style */
+label {
+    color: #333;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    font-size: 15px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #3b82f6;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Button Container */
+.form-buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #26b609;
+}
+
+/* Cancel Link */
+a {
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+a:hover {
+    background: #cc0d0d;
+    color: #ffffff;
+}

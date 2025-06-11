@@ -1,0 +1,66 @@
+body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #000000;
+            margin: 40px;
+            color: #333;
+            text-align: center; /* Center heading and everything */
+        }
+        h1 {
+            color: #ffffff;
+        }
+        h2 {
+            margin-top: 30px;
+            color: #ffffff;
+        }
+        table {
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            margin: 15px auto;  /* center horizontally */
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            text-align: left;  /* keep text left aligned */
+        }
+        th {
+            background-color: #35b929;
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #96e09c;
+        }
+        a.logout-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color:  #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        a.logout-btn:hover {
+            background-color:  #3c9e15;
+        }
+          button.delete-btn {
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #a30000;  /* dark red */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+             transition: background-color 0.3s ease;
+            }
+
+        button.delete-btn:hover {
+            background-color: #e60000;  /* bright red on hover */
+        }
+

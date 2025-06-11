@@ -1,0 +1,151 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #121212;
+    margin: 40px;
+    color: #eee;
+    text-align: center;
+}
+
+h2, h3 {
+    margin: 10px 0;
+    color: #a3d977;
+}
+
+form.date-form {
+    margin: 20px auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+input[type="date"] {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 1rem;
+    background: #222;
+    color: #eee;
+}
+
+button[type="submit"] {
+    display: block;         /* Make button a block-level element */
+    margin: 20px auto 0;    /* Top margin 20px, auto left/right to center, no bottom margin */
+    padding: 9px 16px;
+    background-color: #35b929;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0f4604;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #35b929;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2b9b20;
+}
+
+
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+th, td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+    color: #ddd;
+}
+
+th {
+    background-color: #35b929;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #2e4d1f;
+}
+
+a.toggle-link {
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+a.available {
+    color: #78c850;
+}
+
+a.available:hover {
+    color: #a0e580;
+}
+
+a.booked {
+    color: #f25252;
+}
+
+a.booked:hover {
+    color: #ff7f7f;
+}
+
+.top-right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    padding: 8px 14px;
+    background-color: #2b2b2b;
+    color: #eee;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #444;
+}
+
+.logout {
+    background-color: #9b1c1c;
+    border: 1px solid #b82a2a;
+}
+
+.logout:hover {
+    background-color: #b82a2a;
+}
