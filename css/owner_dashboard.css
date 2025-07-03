@@ -1,0 +1,583 @@
+/* Modern CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-brand h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #ffffff 0%, #a3ff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn.secondary {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(163, 255, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(163, 255, 0, 0.1);
+}
+
+.nav-btn.logout {
+    color: #ff4757;
+    background: rgba(255, 71, 87, 0.1);
+    border-color: rgba(255, 71, 87, 0.2);
+}
+
+.nav-btn.logout:hover {
+    background: rgba(255, 71, 87, 0.2);
+    border-color: rgba(255, 71, 87, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.2);
+}
+
+/* Main Content */
+.main-content {
+    min-height: calc(100vh - 70px);
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    margin-bottom: 40px;
+}
+
+.welcome-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.025em;
+}
+
+.turf-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.turf-name {
+    font-weight: 600;
+    color: #a3ff00;
+}
+
+.turf-address {
+    position: relative;
+    padding-left: 16px;
+}
+
+.turf-address::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Card Component */
+.card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(163, 255, 0, 0.2);
+    box-shadow: 0 8px 40px rgba(163, 255, 0, 0.1);
+}
+
+.card-header {
+    padding: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(163, 255, 0, 0.03);
+}
+
+.card-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.card-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+/* Date Section */
+.date-section {
+    margin-bottom: 40px;
+}
+
+.date-form {
+    padding: 32px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+}
+
+.date-input-group {
+    display: flex;
+    gap: 16px;
+    align-items: end;
+}
+
+.date-input {
+    flex: 1;
+    max-width: 220px;
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: #a3ff00;
+    box-shadow: 0 0 0 3px rgba(163, 255, 0, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #a3ff00 0%, #7dd800 100%);
+    color: #000000;
+    box-shadow: 0 4px 20px rgba(163, 255, 0, 0.3);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(163, 255, 0, 0.4);
+}
+
+.btn.large {
+    padding: 20px 40px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Slots Grid */
+.slots-section {
+    margin-bottom: 40px;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    padding: 32px;
+}
+
+.slot-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.slot-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a3ff00, #7dd800);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.slot-card:hover {
+    border-color: rgba(163, 255, 0, 0.3);
+    box-shadow: 0 8px 40px rgba(163, 255, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.slot-card:hover::before {
+    opacity: 1;
+}
+
+.slot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slot-time {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.status-badge.available {
+    background: rgba(163, 255, 0, 0.15);
+    color: #a3ff00;
+    border: 1px solid rgba(163, 255, 0, 0.3);
+}
+
+.status-badge.available:hover {
+    background: rgba(163, 255, 0, 0.25);
+    transform: scale(1.05);
+}
+
+.status-badge.booked {
+    background: rgba(255, 71, 87, 0.15);
+    color: #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.status-badge.booked:hover {
+    background: rgba(255, 71, 87, 0.25);
+    transform: scale(1.05);
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.slot-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.current-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.price-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.price-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #a3ff00;
+}
+
+.price-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-input-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.price-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 16px;
+    font-size: 16px;
+    color: #a3ff00;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.price-input {
+    width: 100%;
+    padding: 16px 20px 16px 36px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.price-input:focus {
+    outline: none;
+    border-color: #a3ff00;
+    box-shadow: 0 0 0 3px rgba(163, 255, 0, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Form Actions */
+.form-actions {
+    padding: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(163, 255, 0, 0.02);
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 16px;
+    }
+    
+    .nav-brand h1 {
+        font-size: 20px;
+    }
+    
+    .nav-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    .nav-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .welcome-content h2 {
+        font-size: 28px;
+    }
+    
+    .turf-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .turf-address {
+        padding-left: 0;
+    }
+    
+    .turf-address::before {
+        display: none;
+    }
+    
+    .date-input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .date-input {
+        max-width: none;
+    }
+    
+    .slots-grid {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+    
+    .slot-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .current-price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-actions {
+        gap: 8px;
+    }
+    
+    .nav-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .nav-btn span {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 24px 0;
+    }
+    
+    .welcome-section {
+        margin-bottom: 32px;
+    }
+    
+    .date-section, .slots-section {
+        margin-bottom: 32px;
+    }
+    
+    .card-header {
+        padding: 24px;
+    }
+    
+    .date-form {
+        padding: 24px;
+    }
+    
+    .slots-grid {
+        padding: 24px;
+        gap: 20px;
+    }
+    
+    .slot-card {
+        padding: 20px;
+    }
+    
+    .form-actions {
+        padding: 24px;
+    }
+    
+    .welcome-content h2 {
+        font-size: 24px;
+    }
+}
