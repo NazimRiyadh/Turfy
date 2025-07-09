@@ -1,0 +1,458 @@
+/* Player Dashboard Specific Styles */
+
+/* Player Info */
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.player-email {
+    font-weight: 500;
+    color: #a3ff00;
+}
+
+.player-joined {
+    position: relative;
+    padding-left: 16px;
+}
+
+.player-joined::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Summary Grid */
+.summary-section {
+    margin-bottom: 40px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.summary-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.summary-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a3ff00, #7dd800);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.summary-card:hover {
+    border-color: rgba(163, 255, 0, 0.3);
+    box-shadow: 0 8px 40px rgba(163, 255, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.summary-card:hover::before {
+    opacity: 1;
+}
+
+.summary-card.cta-card {
+    background: linear-gradient(135deg, rgba(163, 255, 0, 0.1) 0%, rgba(125, 216, 0, 0.05) 100%);
+    border-color: rgba(163, 255, 0, 0.2);
+}
+
+.summary-card.cta-card::before {
+    opacity: 1;
+}
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(163, 255, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.summary-icon svg {
+    color: #a3ff00;
+}
+
+.summary-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.summary-content p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.cta-card .summary-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.cta-card .summary-content p {
+    margin-bottom: 20px;
+}
+
+/* Bookings Sections */
+.bookings-section, .history-section {
+    margin-bottom: 40px;
+}
+
+.bookings-content {
+    min-height: 200px;
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 32px;
+    text-align: center;
+}
+
+.empty-state svg {
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+.empty-state h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+/* Bookings Table */
+.bookings-table-wrapper {
+    padding: 32px;
+    overflow-x: auto;
+}
+
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.bookings-table th,
+.bookings-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bookings-table th {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.bookings-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.bookings-table tr:last-child td {
+    border-bottom: none;
+}
+
+.turf-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.turf-cell strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.turf-location {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+.price-cell {
+    font-weight: 600;
+    color: #a3ff00;
+    font-size: 15px;
+}
+
+/* Status Badge Extensions */
+.status-badge.pending {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.status-badge.pending:hover {
+    background: rgba(255, 193, 7, 0.25);
+}
+
+.status-badge.completed {
+    background: rgba(40, 167, 69, 0.15);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.status-badge.completed:hover {
+    background: rgba(40, 167, 69, 0.25);
+}
+
+.status-badge.cancelled {
+    background: rgba(108, 117, 125, 0.15);
+    color: #6c757d;
+    border: 1px solid rgba(108, 117, 125, 0.3);
+}
+
+.status-badge.cancelled:hover {
+    background: rgba(108, 117, 125, 0.25);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.action-btn.view:hover {
+    background: rgba(163, 255, 0, 0.1);
+    border-color: rgba(163, 255, 0, 0.3);
+    color: #a3ff00;
+}
+
+.action-btn.cancel:hover {
+    background: rgba(255, 71, 87, 0.1);
+    border-color: rgba(255, 71, 87, 0.3);
+    color: #ff4757;
+}
+
+.action-btn.book-again:hover {
+    background: rgba(0, 123, 255, 0.1);
+    border-color: rgba(0, 123, 255, 0.3);
+    color: #007bff;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-bottom: 40px;
+}
+
+.profile-content {
+    padding: 32px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-input {
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    cursor: not-allowed;
+}
+
+.profile-input:focus {
+    outline: none;
+    border-color: rgba(163, 255, 0, 0.3);
+    box-shadow: 0 0 0 3px rgba(163, 255, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 32px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #a3ff00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .player-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .player-joined {
+        padding-left: 0;
+    }
+    
+    .player-joined::before {
+        display: none;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-card {
+        padding: 24px;
+    }
+    
+    .bookings-table-wrapper {
+        padding: 24px;
+    }
+    
+    .bookings-table {
+        font-size: 13px;
+    }
+    
+    .bookings-table th,
+    .bookings-table td {
+        padding: 12px;
+    }
+    
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .bookings-table-wrapper {
+        padding: 16px;
+    }
+    
+    .bookings-table {
+        font-size: 12px;
+    }
+    
+    .bookings-table th,
+    .bookings-table td {
+        padding: 8px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .action-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .turf-cell {
+        gap: 2px;
+    }
+    
+    .turf-location {
+        font-size: 11px;
+    }
+    
+    .status-badge {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+}

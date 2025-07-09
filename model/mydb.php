@@ -200,4 +200,39 @@ function insert_turf($conn, $data) {
     return $result;
 }
 
+//--------------------------
+//player-part----------------
+//---------------------------
+
+//insert player 
+function insert_player($conn, $data) {
+    $stmt = $conn->prepare("INSERT INTO players 
+        (username, password, full_name, phone, email, dob, address, sports, other_sport, created_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    if (!$stmt) {
+        return false;
+    }
+
+    $stmt->bind_param(
+        "ssssssssss",
+        $data['username'],
+        $data['password'],       // Should already be hashed in controller
+        $data['full_name'],
+        $data['phone'],
+        $data['email'],
+        $data['dob'],
+        $data['address'],
+        $data['sports'],
+        $data['other_sport'],
+        $data['created_at']
+    );
+
+    $success = $stmt->execute();
+    $stmt->close();
+
+    return $success;
+}
+
+
 ?>
