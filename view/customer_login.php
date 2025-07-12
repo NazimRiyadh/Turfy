@@ -16,7 +16,6 @@
         </div>
         
         <form action="../controller/control_customer_login.php" method="post" id="loginForm">
-           <form action="../controller/control_customer_login.php" method="post" id="loginForm">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required />
